@@ -1,14 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #050a1a; /* Derin gece mavisi */
+    /* Ana renk yine derin gece mavisi */
+    background-color: #050a1a; 
+    
+    /* YENİ GÖRSEL BURAYA EKLENİYOR */
+    /* Bu kod, yukarıdaki ejderha ve kahraman görselini kullanır. */
     background-image: 
-        linear-gradient(rgba(5, 10, 26, 0.8), rgba(5, 10, 26, 0.8)),
-        url('https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Örnek mistik şato/orman görseli */
-    background-attachment: fixed;
-    background-size: cover;
+        /* Okunabilirlik için görselin üzerine hafif karanlık bir katman atıyoruz */
+        linear-gradient(rgba(5, 10, 26, 0.85), rgba(5, 10, 26, 0.95)),
+        url('image_0.png'); /* Görselin adı buraya gelecek */
+    
+    /* Görselin ekranda nasıl duracağını ayarlıyoruz */
+    background-attachment: fixed; /* Sayfa kaydıkça arka plan sabit kalır, asil bir his verir */
+    background-size: cover;      /* Görsel tüm ekranı kaplar */
+    background-position: center central; /* Ejderha ve kahraman merkeze hizalanır */
+    
     color: #e0e0e0;
-    font-family: 'Cinzel', serif; /* Fantastik kitaplara uygun asil bir yazı tipi */
+    font-family: 'Cinzel', serif; /* Fantastik fontumuz */
 }
 
 .container {
