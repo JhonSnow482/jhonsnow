@@ -4,78 +4,60 @@
     <meta charset="UTF-8">
     <title>Hibritin Yeri | Majestelerinin Sarayı</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Kitap listesi için özel kodlar */
-        .kitap-konteyner { margin-top: 50px; }
-        .kitap-baslik {
-            background: rgba(30, 58, 138, 0.4);
-            border: 1px solid #74b9ff;
-            padding: 15px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 24px;
-            display: block;
-        }
-        .kitap-baslik:hover { background: rgba(30, 58, 138, 0.8); }
-        .bolumler {
-            display: none; /* Başlangıçta gizli */
-            padding-left: 20px;
-            border-left: 2px solid #74b9ff;
-            margin-bottom: 20px;
-        }
-        .bolum-link {
-            display: block;
-            padding: 10px;
-            color: #cbd5e1;
-            text-decoration: none;
-            border-bottom: 1px solid #1e3a8a;
-        }
-        .bolum-link:hover { color: #74b9ff; }
-    </style>
+    <!-- Parçacık efekti için kütüphane -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
+<!-- Büyü Tozları (Arka Plan) -->
+<div id="particles-js"></div>
+
 <div class="container">
     <header>
-        <h1 id="saray-baslik">Majestelerinin Sarayına Hoş Geldiniz</h1>
-        <div class="mythical-divider"></div>
+        <h1>Majestelerinin Sarayına Hoş Geldiniz</h1>
+        <p style="text-align: center; font-style: italic; color: #74b9ff;">Karanlığın ve efsanelerin buluştuğu yer...</p>
+        <div style="height: 2px; background: linear-gradient(to right, transparent, #74b9ff, transparent); margin: 20px 0;"></div>
     </header>
 
     <main>
-        <div class="kitap-konteyner">
-            <div class="kitap-item">
-                <div class="kitap-baslik" onclick="toggleBolum('bolum1')">📜 Hibritin Doğuşu</div>
-                <div id="bolum1" class="bolumler">
-                    <a href="#" class="bolum-link">Bölüm 1: Kan ve Kılıç</a>
-                    <a href="#" class="bolum-link">Bölüm 2: Ejderha Fısıltısı</a>
-                    <a href="#" class="bolum-link">Bölüm 3: Sarayın Gölgeleri</a>
-                </div>
+        <div class="kitap-item">
+            <div class="kitap-baslik" onclick="toggleBolum('bolum1')">⚔️ HİBRİTİN DOĞUŞU</div>
+            <div id="bolum1" class="bolumler">
+                <p>Mistik parşömen açılıyor...</p>
+                <a href="#" class="bolum-link">I. Bölüm: Kanla Yazılan Kader</a>
+                <a href="#" class="bolum-link">II. Bölüm: Gümüş Ejderha</a>
+                <a href="#" class="bolum-link">III. Bölüm: Sönmeyen Ateş</a>
             </div>
+        </div>
 
-            <div class="kitap-item">
-                <div class="kitap-baslik" onclick="toggleBolum('bolum2')">📜 Karanlık Saray</div>
-                <div id="bolum2" class="bolumler">
-                    <p style="padding: 10px;">Bu eser henüz planlanma aşamasındadır...</p>
-                </div>
+        <div class="kitap-item">
+            <div class="kitap-baslik" onclick="toggleBolum('bolum2')">🔮 KARANLIK KEHANET</div>
+            <div id="bolum2" class="bolumler">
+                <p>Bu sayfalardaki mürekkep henüz kurumadı, Majesteleri...</p>
             </div>
         </div>
     </main>
 </div>
 
 <script>
+    // Açılır kapanır bölümler
     function toggleBolum(id) {
         var bolum = document.getElementById(id);
-        if (bolum.style.display === "block") {
-            bolum.style.display = "none";
-        } else {
-            bolum.style.display = "block";
-        }
+        bolum.style.display = (bolum.style.display === "block") ? "none" : "block";
     }
+
+    // Büyü Tozu (Particles) Ayarları
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 80 },
+            "color": { "value": "#74b9ff" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": true },
+            "size": { "value": 3, "random": true },
+            "move": { "enable": true, "speed": 1, "direction": "top", "random": true }
+        }
+    });
 </script>
 
 </body>
 </html>
-
-
