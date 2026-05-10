@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050a1a; /* Derin gece mavisi */
+    background-image: 
+        linear-gradient(rgba(5, 10, 26, 0.8), rgba(5, 10, 26, 0.8)),
+        url('https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Örnek mistik şato/orman görseli */
+    background-attachment: fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Cinzel', serif; /* Fantastik kitaplara uygun asil bir yazı tipi */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: rgba(10, 20, 45, 0.7); /* İçerik okunabilirliği için yarı şeffaf katman */
+    border-left: 2px solid #1a3a6d;
+    border-right: 2px solid #1a3a6d;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #74b9ff; /* Büyülü mavi parıltı */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(116, 185, 255, 0.4);
+}
+
+.mythical-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #74b9ff, transparent);
+    margin: 30px 0;
+}
