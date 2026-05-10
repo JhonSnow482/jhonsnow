@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benim İlk Sitem</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitap Sitesi</title>
 
-<style>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
 
-body{
-    margin:0;
-    background:#111;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
+    header {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
 
-header{
-    padding:40px;
-    background:#1f1f1f;
-    font-size:30px;
-    font-weight:bold;
-}
+    nav {
+      margin-top: 20px;
+      background: #222;
+      padding: 10px;
+    }
 
-main{
-    padding:50px 20px;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
 
-.card{
-    background:#222;
-    margin:auto;
-    max-width:400px;
-    padding:30px;
-    border-radius:15px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      background: #444;
+      border-radius: 5px;
+    }
 
-button{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:10px;
-    background:#4caf50;
-    color:white;
-    font-size:16px;
-}
+    nav a:hover {
+      background: #666;
+    }
+  </style>
 
-</style>
 </head>
 
 <body>
 
 <header>
-Benim İlk Web Sitem
+  <h1>Kitap Adı</h1>
 </header>
 
-<main>
+<nav>
+  <ul>
+    <li><a href="bolum1.html">Bölüm 1</a></li>
+    <li><a href="bolum2.html">Bölüm 2</a></li>
+    <li><a href="bolum3.html">Bölüm 3</a></li>
+  </ul>
+</nav>
 
-<div class="card">
-
-<h2>Site Yayında 🚀</h2>
-
-<p>
-Bu siteyi GitHub Pages kullanarak ücretsiz yayınladım.
-</p>
-
-<button>Tıkla</button>
-
-</div>
-
-</main>
+<p>Hoş geldin! Bölüm seçerek okumaya başlayabilirsin.</p>
 
 </body>
 </html>
