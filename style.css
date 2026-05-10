@@ -9,7 +9,7 @@ body {
     background-image: 
         /* Okunabilirlik için görselin üzerine hafif karanlık bir katman atıyoruz */
         linear-gradient(rgba(5, 10, 26, 0.85), rgba(5, 10, 26, 0.95)),
-        url('resim_0.png'); /* Görselin adı buraya gelecek */
+        url('image_0.png'); /* Görselin adı buraya gelecek */
     
     /* Görselin ekranda nasıl duracağını ayarlıyoruz */
     background-attachment: fixed; /* Sayfa kaydıkça arka plan sabit kalır, asil bir his verir */
