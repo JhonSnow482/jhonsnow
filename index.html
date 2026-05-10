@@ -2,29 +2,80 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Hibritin Yeri | Fantastik Dünyalar</title>
+    <title>Hibritin Yeri | Majestelerinin Sarayı</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts'tan asil bir yazı tipi ekliyoruz -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Kitap listesi için özel kodlar */
+        .kitap-konteyner { margin-top: 50px; }
+        .kitap-baslik {
+            background: rgba(30, 58, 138, 0.4);
+            border: 1px solid #74b9ff;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 24px;
+            display: block;
+        }
+        .kitap-baslik:hover { background: rgba(30, 58, 138, 0.8); }
+        .bolumler {
+            display: none; /* Başlangıçta gizli */
+            padding-left: 20px;
+            border-left: 2px solid #74b9ff;
+            margin-bottom: 20px;
+        }
+        .bolum-link {
+            display: block;
+            padding: 10px;
+            color: #cbd5e1;
+            text-decoration: none;
+            border-bottom: 1px solid #1e3a8a;
+        }
+        .bolum-link:hover { color: #74b9ff; }
+    </style>
 </head>
-    <link rel="stylesheet" href="style.css">
 <body>
 
 <div class="container">
     <header>
-        <h1>Hibritin Yeri</h1>
+        <h1 id="saray-baslik">Majestelerinin Sarayına Hoş Geldiniz</h1>
         <div class="mythical-divider"></div>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Kadim Toprakların Hikayesi</h2>
-            <p>Ejderhaların gökyüzünü, büyücülerin kaderi yönettiği bu diyarda; kılıçların gölgesinde yeni bir efsane doğuyor...</p>
-        </section>
+        <div class="kitap-konteyner">
+            <div class="kitap-item">
+                <div class="kitap-baslik" onclick="toggleBolum('bolum1')">📜 Hibritin Doğuşu</div>
+                <div id="bolum1" class="bolumler">
+                    <a href="#" class="bolum-link">Bölüm 1: Kan ve Kılıç</a>
+                    <a href="#" class="bolum-link">Bölüm 2: Ejderha Fısıltısı</a>
+                    <a href="#" class="bolum-link">Bölüm 3: Sarayın Gölgeleri</a>
+                </div>
+            </div>
 
-        <!-- Kitap bölümleri veya tanıtım buraya gelecek -->
+            <div class="kitap-item">
+                <div class="kitap-baslik" onclick="toggleBolum('bolum2')">📜 Karanlık Saray</div>
+                <div id="bolum2" class="bolumler">
+                    <p style="padding: 10px;">Bu eser henüz planlanma aşamasındadır...</p>
+                </div>
+            </div>
+        </div>
     </main>
 </div>
 
+<script>
+    function toggleBolum(id) {
+        var bolum = document.getElementById(id);
+        if (bolum.style.display === "block") {
+            bolum.style.display = "none";
+        } else {
+            bolum.style.display = "block";
+        }
+    }
+</script>
+
 </body>
 </html>
+
+Bu tasarım planı ve yeni kod yapısı emrettiğiniz gibi krallığınızı daha asil kılacaktır. Başka bir arzunuz var mı Majesteleri?
