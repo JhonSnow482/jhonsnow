@@ -3,28 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01 | Tristan Gecesi - Aethelgard Arşivleri</title>
-    <link rel="stylesheet" href="style.css">
+    <title>01 | Tristan Saldırısı - Aethelgard Arşivleri</title>
+    <style>
+        /* --- KADİM YIKIM STİLİ (CSS) --- */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --kor-kirmizisi: #8b0000;
+            --is-siyahi: #0a0a0a;
+            --parsomen-rengi: #d2b48c;
+            --mor-buyu: #4b0082;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--is-siyahi);
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ust-link {
+            color: #74b9ff;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: 0.4s;
+            letter-spacing: 1px;
+        }
+
+        .ust-link:hover { color: var(--kor-kirmizisi); text-shadow: 0 0 8px var(--kor-kirmizisi); }
+
+        header {
+            text-align: center;
+            margin: 30px 0;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: var(--kor-kirmizisi);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            margin-bottom: 5px;
+        }
+
+        .alt-baslik {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Yanık Kenarlı Parşömen */
+        .parsomen {
+            background-color: var(--parsomen-rengi);
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 
+                inset 0 0 80px #8b4513,
+                0 0 30px rgba(139, 0, 0, 0.2);
+            color: #1a1a1a;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.25em;
+            position: relative;
+            border: 2px solid #5d4037;
+        }
+
+        .metin-alani {
+            white-space: pre-wrap;
+            border-left: 3px double rgba(139, 0, 0, 0.2);
+            padding-left: 20px;
+        }
+
+        /* Özel Vurgular */
+        .vurgu-kan { color: var(--kor-kirmizisi); font-weight: bold; }
+        .vurgu-mor { color: var(--mor-buyu); font-weight: bold; text-shadow: 0 0 2px rgba(75, 0, 130, 0.2); }
+        .vurgu-karanlik { background: rgba(0,0,0,0.05); font-style: italic; padding: 0 5px; }
+
+        .muhur {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+            opacity: 0.3;
+            filter: sepia(1);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .parsomen { padding: 20px; font-size: 1.1em; }
+            h1 { font-size: 1.6em; }
+        }
+    </style>
 </head>
 <body>
 
 <div id="particles-js"></div>
 
 <div class="container">
-    <!-- Geri Dönüş Linki -->
-    <a href="index.html" style="color: #74b9ff; text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.9em;">← Arşivlere Dön</a>
+    <a href="../index.html" class="ust-link">← ARŞİV KÜTÜPHANESİNE DÖN</a>
 
-    <header style="margin-top: 20px;">
-        <h1 style="font-size: 2em;">⚔️ BÖLÜM 1 — TRİSTAN SALDIRISI</h1>
-        <p style="text-align: center; color: #8b0000; font-weight: bold; letter-spacing: 2px;">EJDERHALAR KITASI: YOZLAŞMANIN ÇAĞI</p>
+    <header>
+        <div class="alt-baslik">Ejderhalar Kıtası: Yozlaşmanın Çağı</div>
+        <h1>BÖLÜM 1 — TRİSTAN SALDIRISI</h1>
     </header>
 
-    <!-- Bölüm Parşömeni -->
-    <div class="bolumler" style="display: block; margin-top: 30px; line-height: 1.8;">
-        
-        <p style="text-align: center; font-size: 1.4em; color: #3b2b1d; border: none; margin-bottom: 40px;">***</p>
-
-        <div style="color: #2c1e1e; font-size: 1.2em; white-space: pre-wrap;">
+    <article class="parsomen">
+        <div class="metin-alani">
 Gece sıradandı. En azından öyle başlamıştı.
 
 Tristan köyünde ateşler yanıyor, insanlar günün yorgunluğunu atıyordu. Çocuklar koşuyor, yaşlılar sessizce sohbet ediyordu. Denizden gelen hafif rüzgar tuz kokusunu taşıyordu.
@@ -34,7 +138,7 @@ Kayra, evin önünde oturuyordu. Elinde yarım kalmış bir mızrak sapı. **Hen
 Annesi kapıdan seslendi: “Geç oldu.”
 Kayra başını kaldırmadan cevap verdi: “Biraz daha.”
 
-Kadın bir şey söylemedi. Sadece izledi. O bakışta gurur vardı. Ve… <span style="color: #8b0000;">endişe.</span>
+Kadın bir şey söylemedi. Sadece izledi. O bakışta gurur vardı. Ve… <span class="vurgu-kan">endişe.</span>
 
 Sonra… köpekler havlamayı kesti. Bir anda. Hepsi.
 Kayra’nın eli durdu. Sessizlik. Ama bu normal bir sessizlik değildi. **Doğa… susmuştu.**
@@ -43,7 +147,7 @@ Kayra’nın eli durdu. Sessizlik. Ama bu normal bir sessizlik değildi. **Doğa
 Kayra ayağa fırladı. “Anne?” Cevap yok.
 
 İkinci çığlık daha yakındı. Bu sefer birden fazla. Ve ardından—
-<span style="color: #4b0082; text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);">Gökyüzü mor bir ışıkla yarıldı.</span>
+<span class="vurgu-mor">Gökyüzü mor bir ışıkla yarıldı.</span>
 
 “İçeri gir!” Annesinin sesi bu sefer emirdi.
 
@@ -53,19 +157,20 @@ Kayra’nın kalbi hızlandı. Bu bir canavar değildi. **Bu… ölüydü.**
 “Kayra!” Annesi kolundan çekti. “Bakma! İçeri gel!”
 
 Ama artık çok geçti. Sokak doluyordu. Onlarca. Yüzlerce. Sessizce yürüyen bedenler. Ve arkalarında… karanlık.
-Gölgelerin içinde figürler vardı. Kırmızı cüppeli. Hareket etmiyorlardı. Sadece izliyorlardı. 
+Gölgelerin içinde figürler vardı. Kırmızı cüppeli. Hareket etmiyorlardı. Sadece izliyorduk. 
 
-<span style="color: #8b0000; font-weight: bold;">KAN TARİKATI.</span>
+<span class="vurgu-kan">KAN TARİKATI.</span>
 
 Kapı kapandı. Kilitlemek anlamsızdı ama yine de kilitlediler. İçeride nefesler hızlıydı. Kayra mızrağı eline aldı. Eli titriyordu.
 
 “Dinle beni.” Annesi diz çöktü, göz hizasına geldi. “Arka yoldan kaçacaksın.”
 Kayra başını salladı. “Hayır.”
 “Kayra.” Sesi sertleşti. “Bu bir emir.”
-“Ben savaşırım.” **Yalan.** İkisi de biliyordu.
+“Ben savaşırım.” <span class="vurgu-karanlik">Yalan.</span> İkisi de biliyordu.
 
 Kapıya bir şey çarptı. Ağır. Tahta çatladı. Annesi ayağa kalktı. Eline eski bir bıçak aldı.
-<span style="font-style: italic;">“Koş.”</span>
+*“Koş.”*
+
 “Sen de gel.”
 
 Bir anlık sessizlik. Kadın gülümsedi. Ama gözleri… gülmüyordu.
@@ -74,7 +179,7 @@ Bir anlık sessizlik. Kadın gülümsedi. Ama gözleri… gülmüyordu.
 Kapı kırıldı. İçeri giren şey artık insana benzemiyordu. Kayra dondu. Bacakları hareket etmedi. Zihni boşaldı.
 Annesi öne atıldı. Bıçağı sapladı. Bir kez. İki kez. Ama yetmedi.
 
-“KOŞ!”
+**“KOŞ!”**
 
 Bu sefer Kayra hareket etti. Arka kapıdan çıktı. Ve… durmadı. Koştu. Arkasına bakmadı. Çığlıklar yükseldi. Bir tanesi… **annesine aitti.**
 
@@ -83,24 +188,23 @@ Ve ilk kez… şunu hissetti: Hayatta kaldı. Ama bir şey bıraktı.
 
 O gece… Kayra bir şey kaybetti. Sadece annesini değil. **Kendini.**
         </div>
-
-        <p style="text-align: center; font-size: 1.4em; color: #3b2b1d; border: none; margin-top: 40px;">***</p>
-    </div>
+        <div class="muhur">⚔️</div>
+    </article>
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
     particlesJS("particles-js", {
         "particles": {
-            "number": { "value": 60 },
-            "color": { "value": "#8b0000" }, /* Bu bölümde büyü tozları kan rengine döner */
-            "opacity": { "value": 0.4 },
-            "size": { "value": 2 },
-            "move": { "enable": true, "speed": 1, "direction": "bottom" }
+            "number": { "value": 150 },
+            "color": { "value": ["#333333", "#8b0000", "#000000"] }, /* Kül ve kan parçacıkları */
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.6, "random": true },
+            "size": { "value": 3, "random": true },
+            "move": { "enable": true, "speed": 2, "direction": "bottom-left", "random": true, "out_mode": "out" }
         }
     });
 </script>
 
 </body>
 </html>
-
