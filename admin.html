@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethelgard | Yönetim Odası</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-panel {
+            background: rgba(10, 20, 45, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #74b9ff;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #050a1a;
+            border: 1px solid #1a3a6d;
+            color: #e0e0e0;
+            font-family: 'Crimson Text', serif;
+        }
+        button {
+            background: #74b9ff;
+            color: #050a1a;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Cinzel', serif;
+            width: 100%;
+        }
+        button:hover { background: #e0e0e0; }
+        .tab { display: none; }
+        .tab.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yönetim Odası</h1>
+        <div class="admin-panel">
+            <div id="login-zone">
+                <p style="text-align:center;">Mührünüzü Girin:</p>
+                <input type="password" id="admin-pass" placeholder="Gizli Şifre...">
+                <button onclick="checkPass()">Giriş Yap</button>
+            </div>
+
+            <div id="main-panel" class="tab">
+                <h3>Yeni Bölüm Ekle</h3>
+                <select id="kitap-sec">
+                    <option value="kitap1">EJDERHALAR KITASI: YOZLAŞMANIN ÇAĞI</option>
+                </select>
+                <input type="text" id="bolum-ad" placeholder="Bölüm Adı (Örn: IV. Bölüm)">
+                <textarea id="bolum-icerik" rows="10" placeholder="Bölüm metnini buraya nakşedin..."></textarea>
+                <button onclick="kaydet()">Arşive Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPass() {
+            const pass = document.getElementById('admin-pass').value;
+            if(pass === "1234") { // Burayı istediğiniz şifreyle değiştirin Majesteleri
+                document.getElementById('login-zone').style.display = 'none';
+                document.getElementById('main-panel').classList.add('active');
+            } else {
+                alert("Mühür hatalı! Saray muhafızları çağırılıyor...");
+            }
+        }
+
+        function kaydet() {
+            alert("Bölüm başarıyla mühürlendi! (Not: GitHub Pages statik olduğu için bu verileri otomatik kaydetmek için JSON veya Firebase altyapısı kuracağız)");
+        }
+    </script>
+</body>
+</html>
