@@ -107,3 +107,33 @@ h1 {
     font-style: italic;
     font-weight: bold;
 }
+
+
+/* Mobil Cihazlar İçin Özel Düzenlemeler */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Kenarlardan çok az boşluk bırakır */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Başlığı mobil ekran için küçültür */
+    }
+
+    .kitap-baslik {
+        padding: 15px;
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+
+    .bolumler {
+        padding: 20px 15px;
+        font-size: 1.1em; /* Mobilde daha rahat okuma sağlar */
+    }
+
+    /* Mobilde imleç parıltısı bazen sorun yaratabilir, onu gizleyelim */
+    body {
+        cursor: default;
+    }
+}
