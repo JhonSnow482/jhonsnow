@@ -107,22 +107,22 @@ h1 {
     text-align: center;
 }
 
-/* BÖLÜM LİNKLERİ (Mürekkep Etkisi) */
+/* Bölüm Linklerini Düzenleyen Kod */
 .bolum-link {
     display: block;
-    padding: 12px;
-    color: #3b2b1d !important; /* Net okunan mürekkep rengi */
+    padding: 15px 10px;
+    color: #3b2b1d !important; /* Mavi yerine koyu kahve/mürekkep rengi */
     text-decoration: none;
-    border-bottom: 1px dashed rgba(59, 43, 29, 0.3);
-    font-weight: 700;
-    font-size: 1.25em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
     transition: all 0.3s ease;
 }
 
 .bolum-link:hover {
-    color: #8b0000 !important; /* Kan kırmızısı vurgu */
-    background: rgba(0, 0, 0, 0.05);
-    padding-left: 25px;
+    color: #8b0000 !important; /* Üzerine gelince kan kırmızısı olsun */
+    background: rgba(0,0,0,0.05);
+    padding-left: 20px;
 }
 
 /* MOBİL UYUM BÜYÜSÜ */
