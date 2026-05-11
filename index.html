@@ -2,20 +2,19 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Hibritin Yeri | Majestelerinin Sarayı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethelgard Arşivleri | Majestelerinin Hazinesi</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Parçacık efekti için kütüphane -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-<!-- Büyü Tozları (Arka Plan) -->
 <div id="particles-js"></div>
 
 <div class="container">
     <header>
-        <h1>Majestelerinin Sarayına Hoş Geldiniz</h1>
-        <p style="text-align: center; font-style: italic; color: #74b9ff;">Karanlığın ve efsanelerin buluştuğu yer...</p>
+        <h1>Aethelgard Arşivleri</h1>
+        <p style="text-align: center; font-style: italic; color: #74b9ff;">Unutulmuş Diyarların ve Kadim Efsanelerin Koruyucusu</p>
         <div style="height: 2px; background: linear-gradient(to right, transparent, #74b9ff, transparent); margin: 20px 0;"></div>
     </header>
 
@@ -23,7 +22,7 @@
         <div class="kitap-item">
             <div class="kitap-baslik" onclick="toggleBolum('bolum1')">⚔️ HİBRİTİN DOĞUŞU</div>
             <div id="bolum1" class="bolumler">
-                <p>Mistik parşömen açılıyor...</p>
+                <p>Mistik parşömen açılıyor, mürekkep canlanıyor...</p>
                 <a href="#" class="bolum-link">I. Bölüm: Kanla Yazılan Kader</a>
                 <a href="#" class="bolum-link">II. Bölüm: Gümüş Ejderha</a>
                 <a href="#" class="bolum-link">III. Bölüm: Sönmeyen Ateş</a>
@@ -33,20 +32,18 @@
         <div class="kitap-item">
             <div class="kitap-baslik" onclick="toggleBolum('bolum2')">🔮 KARANLIK KEHANET</div>
             <div id="bolum2" class="bolumler">
-                <p>Bu sayfalardaki mürekkep henüz kurumadı, Majesteleri...</p>
+                <p>Bu sayfalar henüz mühürlü, Majesteleri...</p>
             </div>
         </div>
     </main>
 </div>
 
 <script>
-    // Açılır kapanır bölümler
     function toggleBolum(id) {
         var bolum = document.getElementById(id);
         bolum.style.display = (bolum.style.display === "block") ? "none" : "block";
     }
 
-    // Büyü Tozu (Particles) Ayarları
     particlesJS("particles-js", {
         "particles": {
             "number": { "value": 80 },
