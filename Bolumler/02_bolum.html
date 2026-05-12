@@ -5,196 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>02 | Solin - Aethelgard Arşivleri</title>
     <style>
-        /* --- KADİM STİL SİHRİ (CSS) --- */
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap');
 
-        :root {
-            --su-mavisi: #74b9ff;
-            --kan-kirmizisi: #8b0000;
-            --parsomen-rengi: #e4d5b7;
-            --derin-gece: #050a1a;
-        }
-
         body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--derin-gece);
-            color: #e0e0e0;
-            font-family: 'Cinzel', serif;
-            overflow-x: hidden;
-            line-height: 1.6;
+            margin: 0; background: #00050a; color: #e0f0ff;
+            font-family: 'Cinzel', serif; line-height: 1.7;
         }
 
-        /* Arka Plan Parçacıkları */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; }
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px;
-            position: relative;
-            z-index: 2;
-        }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; position: relative; z-index: 2; }
 
-        .geri-link {
-            color: var(--su-mavisi);
-            text-decoration: none;
-            font-size: 0.9em;
-            transition: 0.3s;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .geri-link:hover { text-shadow: 0 0 10px var(--su-mavisi); }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid rgba(116, 185, 255, 0.2);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: var(--su-mavisi);
-            text-shadow: 0 0 20px rgba(116, 185, 255, 0.4);
-            margin: 10px 0;
-        }
-
-        .kitap-adi {
-            color: var(--kan-kirmizisi);
-            letter-spacing: 4px;
-            font-weight: bold;
-            font-size: 0.8em;
-        }
-
-        /* Geliştirilmiş Parşömen Tasarımı */
         .parsomen {
-            background-color: var(--parsomen-rengi);
-            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-            padding: 50px;
-            border-radius: 4px;
-            box-shadow: inset 0 0 100px #c3a67d, 0 20px 40px rgba(0,0,0,0.8);
-            color: #2c1e1e;
-            font-family: 'Crimson Text', serif;
-            font-size: 1.3em;
-            position: relative;
-            border: 1px solid #d4b483;
+            background: #f0f4f8; color: #102a43;
+            padding: 50px; border-radius: 15px 50px 15px 50px;
+            box-shadow: 0 0 40px rgba(116, 185, 255, 0.2);
+            font-family: 'Crimson Text', serif; font-size: 1.3em;
+            border-left: 10px solid #243b55;
         }
 
-        .parsomen::before {
-            content: '';
-            position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
-            border: 1px solid rgba(93, 64, 55, 0.2);
-            pointer-events: none;
-        }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { color: #74b9ff; margin: 0; letter-spacing: 3px; }
+        .kitap { color: #243b55; font-size: 0.8em; opacity: 0.7; }
 
-        .vurgu-mana { color: #0984e3; font-weight: bold; }
-        .vurgu-kan { color: var(--kan-kirmizisi); font-weight: bold; text-transform: uppercase; }
-        .mor-isik { color: #6c5ce7; font-style: italic; text-shadow: 0 0 5px rgba(108, 92, 231, 0.3); }
+        .mana { color: #0984e3; font-weight: bold; text-shadow: 0 0 5px rgba(9, 132, 227, 0.2); }
+        .aksiyon { color: #d63031; font-weight: bold; }
+        .dusence { font-style: italic; color: #486581; }
 
-        .bolum-sonu {
-            text-align: center;
-            font-size: 1.5em;
-            margin-top: 40px;
-            color: rgba(0,0,0,0.2);
-        }
+        .deniz-ayrac { text-align: center; color: #74b9ff; font-size: 1.5em; margin: 30px 0; }
 
-        /* Mobil Uyumluluk */
-        @media (max-width: 768px) {
-            .container { padding: 15px; margin: 20px auto; }
-            .parsomen { padding: 25px; font-size: 1.15em; }
-            h1 { font-size: 1.8em; }
-        }
+        @media (max-width: 768px) { .parsomen { padding: 25px; } }
     </style>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <header>
+            <div class="kitap">EJDERHALAR KITASI</div>
+            <h1>BÖLÜM 2 — SOLİN</h1>
+        </header>
+        <article class="parsomen">
+            Deniz sakindi. Ama **Solin** huzursuzdu. Tristan limanında duruyordu.
+            Gözleri dalgaların üzerinde. Tuz kokusu yoğundu. Ama onun dikkatini çeken bu değildi. <span class="mana">Sessizlik.</span>
 
-<div id="particles-js"></div>
+            “Garip…” Kendi kendine fısıldadı.
 
-<div class="container">
-    <a href="../index.html" class="geri-link">← ARŞİVLERE DÖN</a>
+            Su… çok sakindi. Küçük titreşimler bile yoktu. Solin bir şey hissetti. <span class="mana">Mana.</span> Ama doğal değildi. Sanki… çürümüş gibiydi.
 
-    <header>
-        <div class="kitap-adi">EJDERHALAR KITASI: YOZLAŞMANIN ÇAĞI</div>
-        <h1>BÖLÜM 2 — SOLİN</h1>
-    </header>
+            <div class="deniz-ayrac">~ ~ ~</div>
 
-    <article class="parsomen">
-        <div id="hikaye-metni">
-Deniz sakindi. Ama **Solin** huzursuzdu. Tristan limanında duruyordu.
+            Hava nemlendi. Parmaklarının arasında ince bir <span class="mana">su halkası</span> oluştu. Ama titriyordu. “Bu… ne?”
 
-Elleri pelerininin içinde, gözleri dalgaların üzerinde. Tuz kokusu yoğundu. Ama onun dikkatini çeken bu değildi. **Sessizlik.**
+            Bir çığlık. Uzakta. <span style="color: #6c5ce7;">Mor bir ışık yükseldi.</span> Solin’in bakışları keskinleşti. “Başladı…”
 
-“Garip…” Kendi kendine fısıldadı.
-Yanındaki tüccar homurdandı. “Ne garip?”
-Solin cevap vermedi. Başını hafifçe yana eğdi. Dinledi. 
+            Koştu. İnsanlar kaçıyordu. “Canavarlar!” “Tanrılar bizi terk etti!”
 
-Su… çok sakindi. Normalde kıyıya çarpan dalgalar olurdu. Küçük titreşimler. Ama şimdi— hiçbir şey yoktu.
+            Solin’in eli hareket etti. Su… keskinleşti. Bir bıçak gibi. <span class="aksiyon">Şlak!</span> Varlığın kafası koptu. Ama gövde hâlâ hareket ediyordu.
 
-Solin bir şey hissetti. <span class="vurgu-mana">Mana.</span> Ama doğal değildi. Sanki… çürümüş gibiydi.
-Solin’in gözleri aniden sertleşti. “Git.”
+            Yukarı baktı. Kırmızı cüppeli figürler. <span style="color: #8b0000;">KAN TARİKATI.</span>
 
-Solin yalnız kaldı. Ellerini açtı. Hava nemlendi. Parmaklarının arasında ince bir <span class="vurgu-mana">su halkası</span> oluştu. Ama titriyordu. “Bu… ne?”
+            “Bu… planlı.” Savaşmayacak. Çünkü bu savaş kazanılmazdı. <span class="dusence">Hesaplı bir geri çekilme…</span>
 
-Bir çığlık. Uzakta. Solin döndü. <span class="mor-isik">Şehrin içinden mor bir ışık yükseldi.</span>
-Ve ardından— sessizlik kırıldı. Çığlıklar. Koşuşturmalar.
+            Ayaklarının altındaki su yükseldi. İnce damarlar gibi sokaklara yayıldı. Hissetti: **Nerede boşluk var? Nerede ölüm var?**
 
-“Canavarlar!” “Ölüler!” “Tanrılar bizi terk etti!”
+            Liman yanıyordu. Küçük bir gemi gördü. Hazırlanmış. Başka biri de ona doğru koşuyordu. Solin’in gözleri daraldı. 
 
-Solin’in eli istemsizce hareket etti. Su… keskinleşti. Bir bıçak gibi. **Şlak.** 
-Varlığın kafası koptu. Ama… durmadı. Gövde hâlâ hareket ediyordu.
+            Bir şey daha hissetti. **Aura.** Zayıf ama oradaydı. “İnsan…”
 
-Bir gölge üstünden geçti. Yukarı baktı. Kırmızı cüppeli figürler. Havada. 
-<span class="vurgu-kan">KAN TARİKATI.</span>
+            Solin hızlandı. Bu gece bitmemişti. Ama bir şey kesindi: <span class="aksiyon">Bu gece onu değiştirecekti.</span>
+        </article>
+    </div>
 
-“Bu… planlı.”
-Bir adım geri attı. Ve o an— karar verdi. Savaşmayacak. Çünkü bu savaş kazanılmazdı.
-
-Su tekrar şekil değiştirdi. Önüne çıkan ölüleri savurdu. Koştu. Ama bu kaçış değildi. Bu… hesaplı bir geri çekilmeydi.
-
-Ayaklarının altındaki su yükseldi. İnce damarlar gibi sokaklara yayıldı. Hissetti. **Nerede boşluk var? Nerede çıkış var? Nerede ölüm var?**
-
-Liman göründü. Ama… yanıyordu. Gemiler. Çoğu yok edilmişti. “Hayır…”
-
-Ve sonra— küçük bir gemi. Hazırlanmış. Kaçış için. Başka biri de ona doğru koşuyordu. Solin’in gözleri daraldı. “Rakip mi… yoksa—”
-
-Bir şey daha hissetti. **Aura.** Zayıf ama oradaydı. “İnsan…”
-
-Solin hızlandı. Bu gece bitmemişti.
-Ama bir şey kesindi: <span class="vurgu-kan">Bu gece onu değiştirecekti.</span>
-        </div>
-        <div class="bolum-sonu">🗩</div>
-    </article>
-</div>
-
-<!-- --- BÜYÜLÜ PARÇACIKLAR (JS) --- -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-    particlesJS("particles-js", {
-        "particles": {
-            "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#74b9ff" },
-            "shape": { "type": "circle" },
-            "opacity": { "value": 0.5, "random": true },
-            "size": { "value": 2, "random": true },
-            "line_linked": { "enable": false },
-            "move": { "enable": true, "speed": 1.5, "direction": "top", "random": true, "straight": false, "out_mode": "out" }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": { "onhover": { "enable": true, "mode": "bubble" } },
-            "modes": { "bubble": { "distance": 200, "size": 4, "duration": 2, "opacity": 0.8 } }
-        }
-    });
-</script>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 120 },
+                "color": { "value": "#74b9ff" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 100, "color": "#74b9ff", "opacity": 0.2, "width": 1 },
+                "move": { "enable": true, "speed": 1, "direction": "none", "out_mode": "bounce" }
+            }
+        });
+    </script>
 </body>
 </html>
