@@ -4,125 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>00 | İlk Karşılaşma - Aethelgard Arşivleri</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --mortis-gri: #2f3640;
+            --golge-siyah: #000000;
+            --antik-beyaz: #f5f6fa;
+            --kan-mühür: #440000;
+        }
+
+        body {
+            margin: 0; background-color: var(--golge-siyah);
+            color: var(--antik-beyaz); font-family: 'Cinzel', serif;
+            overflow-x: hidden; line-height: 1.8;
+        }
+
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: 1; }
+
+        /* Sis Efekti */
+        .fog {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.8) 100%);
+            z-index: 2; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 50px auto; padding: 20px; position: relative; z-index: 3; }
+
+        .geri { color: #555; text-decoration: none; font-size: 0.8em; transition: 0.5s; }
+        .geri:hover { color: var(--antik-beyaz); letter-spacing: 2px; }
+
+        .parsomen {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            padding: 60px; border-radius: 5px;
+            box-shadow: 0 0 50px rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            font-family: 'Crimson Text', serif; font-size: 1.35em;
+        }
+
+        h1 { color: #fff; text-align: center; font-size: 2.2em; letter-spacing: 5px; margin-bottom: 0; }
+        .ust-not { text-align: center; color: var(--kan-mühür); font-size: 0.7em; letter-spacing: 10px; margin-bottom: 40px; }
+
+        .mortis-ses { 
+            color: #7f8c8d; font-style: italic; display: block; 
+            text-align: center; margin: 20px 0; font-size: 1.2em;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .vurgu { color: #fff; font-weight: bold; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+        .ayrac { text-align: center; margin: 40px 0; opacity: 0.2; font-size: 2em; }
+
+        @media (max-width: 768px) { .parsomen { padding: 30px; font-size: 1.1em; } }
+    </style>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div class="fog"></div>
+    <div class="container">
+        <a href="../index.html" class="geri">← ARŞİV KİTABESİNE DÖN</a>
+        <header>
+            <h1>İLK KARŞILAŞMA</h1>
+            <div class="ust-not">YOZLAŞMANIN ÇAĞI : PROLOG</div>
+        </header>
+        <article class="parsomen">
+            Gece sessizdi. Ama bu sessizlik huzurlu değildi. Toprak nefes almıyor gibiydi.
+            Tristan’ın kıyısında, yanmış ağaçların arasında <span class="vurgu">Kayra</span> tek başına yürüyordu.
 
-<div id="particles-js"></div>
+            Rüzgar yoktu. Kuş yoktu. Ses yoktu. Sadece… <span style="color: #444;">çürüme kokusu.</span>
 
-<div class="container">
-    <!-- Geri Dönüş Linki -->
-    <a href="index.html" style="color: #74b9ff; text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.9em;">← Arşivlere Dön</a>
+            Kayra mızrağını sıkıca kavradı. İçinde bir şey kıpırdadı. O tanıdık his. Tehlike değil. Daha kötü bir şey: <span class="vurgu">Tanıdıklık.</span>
 
-    <header style="margin-top: 20px;">
-        <h1 style="font-size: 2em;">SAHNE — İLK KARŞILAŞMA</h1>
-        <p style="text-align: center; color: #8b0000; font-weight: bold; letter-spacing: 2px;">EJDERHALAR KITASI: YOZLAŞMANIN ÇAĞI</p>
-    </header>
+            Gölgeler hareket etti. Toprak çatladı. Ve karanlığın içinden bir şey yükseldi. Devasa. Sessiz. Canlı… ama ölü gibi.
 
-    <!-- Bölüm Parşömeni -->
-    <div class="bolumler" style="display: block; margin-top: 30px; line-height: 1.8;">
-        
-        <p style="text-align: center; font-size: 1.4em; color: #3b2b1d; border: none; margin-bottom: 40px;">***</p>
+            <div class="ayrac">🕀</div>
 
-        <div style="color: #2c1e1e; font-size: 1.2em; white-space: pre-wrap;">
-Gece sessizdi.
-Ama bu sessizlik huzurlu değildi.
-Toprak nefes almıyor gibiydi.
+            <span style="display:block; text-align:center; font-size: 1.8em; letter-spacing: 15px; color: #fff;">MORTIS</span>
 
-Tristan’ın kıyısında, yanmış ağaçların arasında **Kayra** tek başına yürüyordu.
+            <span class="mortis-ses">“…sen.”</span>
 
-Rüzgar yoktu. Kuş yoktu. Ses yoktu.
-Sadece… <span style="color: #5d4037; font-style: italic;">çürüme kokusu.</span>
+            Kayra’nın kaşları hafifçe çatıldı. “Diğerleri gibi değilsin.”
+            Sessizlik. Kayra ilk kez konuştu: “Sen… Mortis’sin.”
 
-Kayra mızrağını sıkıca kavradı. İçinde bir şey kıpırdadı.
-O tanıdık his. Tehlike değil. Daha kötü bir şey: **Tanıdıklık.**
+            <span class="mortis-ses">“İsimler… önemsizdir.”</span>
 
-Gölgeler hareket etti. Ama rüzgar yoktu.
-Toprak çatladı. Ve karanlığın içinden bir şey yükseldi.
-Devasa. Sessiz. Canlı… ama ölü gibi.
+            Mortis bir adım yaklaştı. Toprak, ayağının altında çürüdü. Kayra’nın içindeki o his büyüdü. Bu korku değildi. Bu… bir yansıma gibiydi.
 
-<span style="color: #8b0000; font-weight: bold; font-size: 1.3em;">MORTIS.</span>
+            <span class="mortis-ses">“Kaçtın. O gece. Koştuğunu gördüm.”</span>
 
-Onu görmek bir varlığa bakmak gibi değildi. Bir fikre bakmak gibiydi. Bir sona.
-Kayra geri adım atmadı. Ama nefesi değişti.
+            Kayra’nın nefesi kesildi. “Yalan.” Ama sesi… eskisi kadar güçlü değildi.
+            “Hayatta kaldın. Ama savaşmadın.”
 
-Mortis başını hafifçe eğdi. Sanki inceliyormuş gibi.
-Sonra… konuştu.
-Sesi kulaktan değil, doğrudan zihinden geliyordu.
+            <span class="mortis-ses">“Ben de aynıyım. Ben de savaşmadım.”</span>
 
-<span style="font-style: italic;">“...sen.”</span>
+            Kayra dondu. “Sen… bir canavarsın.”
+            Uzun bir sessizlik. 
 
-Kayra’nın kaşları hafifçe çatıldı. Mızrağını kaldırdı. Ama saldırmadı.
-“Diğerleri gibi değilsin.”
+            <span class="mortis-ses">“Evet. Ama bu sonradan oldu. Sen de olabilirsin.”</span>
 
-Sessizlik. Kayra ilk kez konuştu:
-“Sen… Mortis’sin.”
+            Kayra mızrağını kaldırdı. “Ben senin gibi değilim.”
+            Mortis durdu. Sonra… sanki gülümsedi.
 
-Bir anlık duraksama. Sonra:
-“İsimler… önemsizdir.”
+            <span class="mortis-ses" style="color: #fff; font-size: 1.5em;">“Henüz.”</span>
 
-Mortis bir adım yaklaştı. Toprak, ayağının altında çürüdü.
-Kayra’nın içindeki o his büyüdü. Bu korku değildi. Bu… bir yansıma gibiydi.
-
-“Kaçtın.”
-
-Kayra’nın gözleri aniden sertleşti. Parmakları mızrağa daha sıkı sarıldı.
-“Ne dediğini bilmiyorsun.”
-
-“Biliyorum.” Bir adım daha. “O gece. Koştuğunu gördüm.”
-
-Kayra’nın nefesi kesildi. “Yalan.” Ama sesi… eskisi kadar güçlü değildi.
-
-“Hayatta kaldın. Ama savaşmadın.”
-
-Rüzgar yoktu. Ama Kayra’nın içi fırtına gibiydi.
-“Kes sesini.”
-
-Mortis başını yana eğdi. Meraklı gibi.
-“Ben de aynıyım.”
-
-Kayra dondu.
-“Ben de savaşmadım. Beni yaratan gittiğinde… sadece izledim.”
-
-Kayra’nın gözleri ilk kez değişti. Öfke… yerini başka bir şeye bıraktı. Anlamaya.
-“Sen… bir canavarsın.”
-
-Uzun bir sessizlik.
-“Evet. Ama bu sonradan oldu.”
-
-Mortis Kayra’ya yaklaştı. Artık aralarında birkaç adım vardı.
-“Sen de olabilirsin.”
-
-Kayra mızrağını kaldırdı. Bu sefer gerçekten.
-“Ben senin gibi değilim.”
-
-Mortis durdu. Uzun süre. Sonra… çok hafif bir şey oldu. Sanki… gülümsedi.
-<span style="color: #8b0000; font-weight: bold;">“Henüz.”</span>
-
-Bir anda… baskı yok oldu. Çürüme hissi çekildi. Gölgeler dağıldı.
-Ve Mortis… yok oldu.
-
-Kayra tek başına kaldı. Ama artık yalnız hissetmiyordu.
-Çünkü ilk kez… birinin onu gerçekten gördüğünü hissetmişti.
-        </div>
-
-        <p style="text-align: center; font-size: 1.4em; color: #3b2b1d; border: none; margin-top: 40px;">***</p>
+            Bir anda… baskı yok oldu. Gölgeler dağıldı. Ve Mortis… yok oldu.
+            Kayra tek başına kaldı. Ama artık yalnız hissetmiyordu.
+        </article>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-    particlesJS("particles-js", {
-        "particles": {
-            "number": { "value": 50 },
-            "color": { "value": "#74b9ff" },
-            "opacity": { "value": 0.3 },
-            "size": { "value": 2 },
-            "move": { "enable": true, "speed": 0.5, "direction": "top" }
-        }
-    });
-</script>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 40 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "edge" },
+                "opacity": { "value": 0.1, "random": true },
+                "size": { "value": 10, "random": true },
+                "move": { "enable": true, "speed": 0.5, "direction": "none", "random": true, "out_mode": "out" }
+            }
+        });
+    </script>
 </body>
 </html>
-
